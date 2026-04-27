@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart-Buffet | Gastro E-shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <script type="module" src="dist/main.js"></script>
-</body>
 
+    <header>
+        <h1>🌿 Smart-Buffet System</h1>
+        <p>Čerstvé jídlo & Ekologické myšlení</p>
+    </header>
+
+    <main class="container">
+        <section class="menu-section">
+            <h2>Nabídka dne</h2>
+            <div id="menu-grid" class="menu-grid">
+                </div>
+        </section>
+
+        <aside class="cart-section">
+            <h2>Váš košík</h2>
+            <div id="cart-items" class="cart-items">
+                <p class="empty-msg">Košík je prázdný</p>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-line">
+                    <span>Mezisoučet:</span>
+                    <span id="subtotal">0 Kč</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Celkem k úhradě:</span>
+                    <span id="total-price">0 Kč</span>
+                </div>
+                <button id="clear-cart" class="btn-secondary">Vyčistit košík</button>
+                <button id="checkout" class="btn-primary">Objednat</button>
+            </div>
+        </aside>
+    </main>
+
+    <script type="module" src="dist/main.js"></script>
 </html>

@@ -5,10 +5,8 @@ export class Product {
         this.name = name;
         this.basePrice = basePrice;
     }
-    get getPrice() {
-        return this.basePrice;
-    }
     get getName() {
         return this.name;
     }
+    ;
 }

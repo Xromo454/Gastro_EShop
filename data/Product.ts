@@ -1,4 +1,4 @@
-export class Product {
+export abstract class Product {
     private name: string;
     protected basePrice: number;
 
@@ -7,11 +7,9 @@ export class Product {
         this.basePrice = basePrice;
     }
 
-    get getPrice(): number {
-        return this.basePrice;
-    }
+    abstract get getPrice(): number;
 
-    get getName(): string {
+    get getName(): string{
         return this.name;
-    }
+    };
 }
