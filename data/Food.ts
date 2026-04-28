@@ -1,6 +1,8 @@
 import { Product } from "./Product.js";
 
 export class Food extends Product {
+
+
     private ingredients: string[];
     private boxPrice: number;
 

@@ -5,7 +5,7 @@ export class Drink extends Product {
         super(name, basePrice);
         this.deposit = deposit;
     }
-    get getDeposit() {
+    get depositAmount() {
         return this.deposit;
     }
     get getPrice() {

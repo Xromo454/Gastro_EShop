@@ -9,7 +9,7 @@ export class Drink extends Product {
         this.deposit = deposit;
     }
 
-    get getDeposit(): number {
+    get depositAmount(): number {
         return this.deposit;
     }
 
