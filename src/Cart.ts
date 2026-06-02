@@ -35,4 +35,8 @@ export class Cart {
         console.log(`TOTAL AMOUNT: ${total.toFixed(2)} EUR`);
         console.log(`----------------------------------------------- \n`);
     }
+
+    public get getItems(): Product[] {
+        return this.items;
+    }
 }

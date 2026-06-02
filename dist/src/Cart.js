@@ -28,4 +28,10 @@ export class Cart {
         console.log(`TOTAL AMOUNT: ${total.toFixed(2)} EUR`);
         console.log(`----------------------------------------------- \n`);
     }
+    get getItems() {
+        return this.items;
+    }
 }
+let zxc = [1, 3, 4, 5, 6];
+console.log(zxc.splice(2, 0));
+console.log(zxc);

@@ -3,43 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart-Buffet | Gastro E-shop</title>
+    <title>Campus-Buffet | Gastro E-shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🌿 Smart-Buffet System</h1>
-        <p>Čerstvé jídlo & Ekologické myšlení</p>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="brand-logo">🌿 CAMPUS<span>BUFFET</span></div>
+            <div class="simulation-controls">
+                <label>
+                    Status: 
+                    <select id="student-toggle">
+                        <option value="false">Standardní zákazník</option>
+                        <option value="true">Student (ISIC Sleva)</option>
+                    </select>
+                </label>
+                <label>
+                    Čas simulace: 
+                    <select id="time-toggle">
+                        <option value="7.0">7:00 (Běžná cena)</option>
+                        <option value="9.58">9:35 (Běžná cena)</option>
+                        <option value="10.0">10:00 (Běžná cena)</option>
+                        <option value="14.0">14:00 (Happy Hour -20%)</option>
+                        <option value="15.0">15:00 (Happy Hour -20%)</option>
+                        <option value="16.0">16:00 (Happy Hour -20%)</option>
+                        <option value="16.017">16:01 (Běžná cena)</option>
+                        <option value="16.5">16:30 (Běžná cena)</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero-banner">
+        <div class="hero-content">
+            <h1>NOVINKY A AKCE</h1>
+            <div class="promo-badge">HAPPY HOUR KAŽDÝ DEN 14:00 - 16:00 UŠETŘÍTE 20%</div>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="menu-section">
-            <h2>Nabídka dne</h2>
+    <nav class="category-nav">
+        <div class="nav-container">
+            <button class="nav-link active" data-category="all">🔥 VŠECHNO</option>
+            <button class="nav-link" data-category="Food">JÍDLO</button>
+            <button class="nav-link" data-category="Drink">NÁPOJE</button>
+        </div>
+    </nav>
+
+    <div class="app-container">
+        
+        <aside class="left-sidebar">
+            <ul class="sidebar-menu">
+                <li class="active" data-filter="all">Aktuální nabídka</li>
+                <li data-filter="happy">Happy Hour Speciály</li>
+                <li data-filter="student">ISIC Výhody</li>
+            </ul>
+        </aside>
+
+        <main class="menu-section">
+            <h2 id="section-title">Dnešní Nabídka</h2>
             <div id="menu-grid" class="menu-grid">
                 </div>
-        </section>
+        </main>
 
         <aside class="cart-section">
-            <h2>Váš košík</h2>
+            <h2>Váš košík 🛒</h2>
             <div id="cart-items" class="cart-items">
                 <p class="empty-msg">Košík je prázdný</p>
             </div>
             
             <div class="cart-summary">
-                <div class="summary-line">
-                    <span>Mezisoučet:</span>
-                    <span id="subtotal">0 Kč</span>
-                </div>
                 <div class="summary-line total">
-                    <span>Celkem k úhradě:</span>
-                    <span id="total-price">0 Kč</span>
+                    <span>Celkem:</span>
+                    <span id="total-price">0.00 EUR</span>
                 </div>
                 <button id="clear-cart" class="btn-secondary">Vyčistit košík</button>
                 <button id="checkout" class="btn-primary">Objednat</button>
             </div>
         </aside>
-    </main>
+    </div>
 
     <script type="module" src="dist/src/main.js"></script>
+</body>
 </html>
