@@ -9,7 +9,7 @@ export class Drink extends Product {
         this.deposit = deposit;
     }
 
-    calculatePrice(isStudent: boolean, currentHour: number): number {
+    public calculatePrice(isStudent: boolean, currentHour: number): number {
         let price = this.basePrice + this.deposit;
 
         // Happy Hours (14:00 - 16:00) -> 20% discount

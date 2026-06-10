@@ -7,7 +7,6 @@ export class Combo extends Product {
     get getItems() {
         return this.items;
     }
-    // Логика скидок такая же, как у всех продуктов
     calculatePrice(isStudent, currentHour) {
         let price = this.basePrice;
         // Happy Hours (14:00 - 16:00) 20% discount

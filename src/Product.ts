@@ -10,7 +10,10 @@ export abstract class Product {
         this.basePrice = basePrice;
     }
 
-    abstract calculatePrice(isStudent: boolean, currentHour: number): number;
+    public abstract calculatePrice(isStudent: boolean, currentHour: number): number;
 
-    get getName(): string { return this.name; }
+    public get getName(): string { return this.name; }
 }
+
+
+

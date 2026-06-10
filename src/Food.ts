@@ -13,22 +13,22 @@ export class Food extends Product {
         this.boxPrice = boxPrice;
     }
 
-    addIngredient(ingredient: string): void {
+    public addIngredient(ingredient: string): void {
         this.ingredients.push(ingredient);
     }
 
-    removeIngredient(ingredient: string): void {
+    public removeIngredient(ingredient: string): void {
         const index = this.ingredients.indexOf(ingredient);
         if (index !== -1) {
             this.ingredients.splice(index, 1);
         }
     }
 
-    get getIngredients(): string[] {
+    public get getIngredients(): string[] {
         return this.ingredients;
     }
 
-    calculatePrice(isStudent: boolean, currentHour: number): number {
+    public calculatePrice(isStudent: boolean, currentHour: number): number {
         let price = this.basePrice + this.boxPrice;
 
         // Happy Hours (14:00 - 16:00) 20% discount
@@ -42,4 +42,4 @@ export class Food extends Product {
 
         return price;
     }
-}
+}   

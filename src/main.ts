@@ -19,7 +19,7 @@ const timeToggle = document.getElementById("time-toggle") as HTMLSelectElement;
 const clearCartBtn = document.getElementById("clear-cart") as HTMLButtonElement;
 const checkoutBtn = document.getElementById("checkout") as HTMLButtonElement;
 
-// Создаем продукты ОДИН раз при запуске, чтобы ссылки в памяти были статичны
+
 const standaloneProducts: Product[] = rawProducts
     .filter(p => p.type !== "Combo")
     .map(product => {
@@ -95,7 +95,7 @@ function renderMenu(): void {
             `;
         }
 
-        // 4. СБОРКА КАРТОЧКИ
+
         card.innerHTML = `
             <div class="product-info">
                 <div class="product-meta-tags">${typeTag}</div>
